@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAP HOUSE</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- FONDO OSCURO DEL CARRITO -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- PANEL LATERAL DEL CARRITO -->
+    <div class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+
+            <button class="close-cart" id="closeCartBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div
+            class="cart-items-container"
+            id="cartItemsContainer">
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total:</span>
+
+                <span id="cartTotalValue">
+                    $0.00
+                </span>
+            </div>
+
+            <button
+                class="btn-primary checkout-btn"
+                onclick="alert('¡Pedido procesado con éxito!')">
+
+                Proceder al Pago
+
+            </button>
+
+            <button
+                class="clear-cart-btn"
+                id="clearCartBtn">
+
+                Vaciar Carrito
+
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- 1. BARRA SUPERIOR -->
+    <div class="header-top">
+
+        <div class="container header-top-content">
+
+            <div class="contact-info">
+
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    premium@capstore.com
+                </span>
+
+                <span>
+                    <i class="fas fa-phone"></i>
+                    0991178396
+                </span>
+
+            </div>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- 2. NAVEGACIÓN -->
+    <nav>
+
+        <div class="container nav-content">
+
+            <a href="#" class="logo">
+                CAP<span>STORE</span>
+            </a>
+
+            <ul class="menu">
+
+                <li>
+                    <a href="#">
+                        Inicio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#productos">
+                        Colección
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <div
+                    class="action-icon"
+                    id="openCartBtn">
+
+                    <i class="fas fa-shopping-bag"></i>
+
+                    <span
+                        class="cart-count"
+                        id="cartBadgeCount">
+
+                        0
+
+                    </span>
+                </div>
+
+                <a
+                    href="#"
+                    class="btn-primary btn-contactar">
+
+                    Contáctanos
+
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 3. CARRUSEL PRINCIPAL -->
+    <section class="carousel-section">
+
+        <div class="carousel-track-container">
+
+            <div class="carousel-track">
+
+                <!-- SLIDE 1 -->
+                <div
+                    class="carousel-slide current-slide">
+
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZoOitkS498D2IkEL3Q2jlsGx15D-07BBN13M1fG0reA&s=10"
+                        alt="New Era Banner 1"
+                        class="carousel-image">
+
+                    <div class="slide-content">
+
+                        <h2>
+                            Colección
+
+                            <span class="text-accent">
+                                Authentic
+                            </span>
+                        </h2>
+
+                        <p>
+                            Lleva el estilo de las ligas mayores
+                            con siluetas icónicas y acabados
+                            perfectos de alta costura.
+                        </p>
+
+                        <a
+                            href="#productos"
+                            class="btn-primary">
+
+                            Explorar Catálogo
+
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <!-- SLIDE 2 -->
+                <div class="carousel-slide">
+
+                    <img
+                        src="https://neweraec.vtexassets.com/arquivos/ids/166656/11941921_1.jpg?v=638387732907330000"
+                        alt="New Era Banner 2"
+                        class="carousel-image">
+
+                    <div class="slide-content">
+
+                        <h2>
+                            Cultura
+
+                            <span class="text-accent">
+                                Streetwear
+                            </span>
+                        </h2>
+
+                        <p>
+                            Modelos estructurados diseñados
+                            para destacar en cualquier rincón
+                            de la ciudad.
+                        </p>
+
+                        <a
+                            href="#productos"
+                            class="btn-primary">
+
+                            Ver Modelos
+
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <button class="carousel-btn btn-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <button class="carousel-btn btn-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+    </section>
+
+
+    <!-- 4. VIDEO PROMOCIONAL -->
+    <section class="promo-video-section">
+
+        <div class="promo-video-background">
+
+            <video
+                src="VIDEO.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                class="promo-video">
+            </video>
+
+        </div>
+
+        <div class="promo-video-overlay"></div>
+
+        <div class="promo-video-content">
+
+            <h2>
+                El estilo empieza
+
+                <span class="text-accent">
+                    en tu cabeza
+                </span>
+            </h2>
+
+            <p>
+                Descubre nuestra colección de gorras
+                premium y lleva tu estilo al siguiente nivel.
+            </p>
+
+            <a
+                href="#productos"
+                class="btn-primary">
+
+                Comprar Ahora
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- 5. SECCIÓN DE CATÁLOGO -->
+    <section
+        id="productos"
+        class="products-section">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>
+                    Nueva Colección Premium
+                </h2>
+
+                <p>
+                    Selecciona tus favoritas y ármalas
+                    directamente en tu carrito interactivo.
+                </p>
+
+            </div>
+
+
+            <div class="product-grid">
+
+                <!-- PRODUCTO 1 -->
+                <div
+                    class="product-card"
+                    data-id="1"
+                    data-name="LA Dodgers Classic Blue"
+                    data-price="32.00"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZNhriCmUPSDaEon4As_W4bITfojjddnacoprKDNMuL55qJaREwhdd-98&s=10">
+
+                    <div class="product-image-container">
+
+                        <span class="product-tag">
+                            Top Hype
+                        </span>
+
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZNhriCmUPSDaEon4As_W4bITfojjddnacoprKDNMuL55qJaREwhdd-98&s=10"
+                            alt="Gorra LA"
+                            class="product-image">
+
+                    </div>
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            New Era 59Fifty
+                        </span>
+
+                        <h3 class="product-name">
+                            LA Dodgers Classic Blue
+                        </h3>
+
+                        <p class="product-price">
+                            $32.00
+                        </p>
+
+                        <button class="add-to-cart-btn">
+                            Añadir al Carrito
+                        </button>
+
+                    </div>
+                </div>
+
+
+                <!-- PRODUCTO 2 -->
+                <div
+                    class="product-card"
+                    data-id="3"
+                    data-name="Foxer Black Velvet"
+                    data-price="38.00"
+                    data-img="https://foxer.ec/cdn/shop/files/6AB2B78B-CF62-4C5E-9552-0EB3E41380B9.jpg?v=1782415351&width=533">
+
+                    <div class="product-image-container">
+
+                        <img
+                            src="https://foxer.ec/cdn/shop/files/6AB2B78B-CF62-4C5E-9552-0EB3E41380B9.jpg?v=1782415351&width=533"
+                            alt="Gorra Foxer Negra"
+                            class="product-image">
+
+                    </div>
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Exclusive Drop
+                        </span>
+
+                        <h3 class="product-name">
+                            Foxer Black Velvet
+                        </h3>
+
+                        <p class="product-price">
+                            $38.00
+                        </p>
+
+                        <button class="add-to-cart-btn">
+                            Añadir al Carrito
+                        </button>
+
+                    </div>
+                </div>
+
+
+                <!-- PRODUCTO 3 -->
+                <div
+                    class="product-card"
+                    data-id="4"
+                    data-name="NY Yankees Monochrome"
+                    data-price="30.00"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReVNwPl0tZpbAI13Y2cpjfbkMThoh_eOICRWvU0kIJawxUiwJ-L-PliA&s=10">
+
+                    <div class="product-image-container">
+
+                        <span class="product-tag">
+                            Nuevo
+                        </span>
+
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReVNwPl0tZpbAI13Y2cpjfbkMThoh_eOICRWvU0kIJawxUiwJ-L-PliA&s=10"
+                            alt="Gorra NY"
+                            class="product-image">
+
+                    </div>
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Classic Fit
+                        </span>
+
+                        <h3 class="product-name">
+                            NY Yankees Monochrome
+                        </h3>
+
+                        <p class="product-price">
+                            $30.00
+                        </p>
+
+                        <button class="add-to-cart-btn">
+                            Añadir al Carrito
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 6. FOOTER -->
+    <footer>
+
+        <div class="container footer-content">
+
+            <a href="#" class="logo">
+                CAP<span>STORE</span>
+            </a>
+
+            <p>
+                &copy; 2026 CapStore.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
